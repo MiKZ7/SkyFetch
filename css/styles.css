@@ -1,0 +1,108 @@
+.navbar {
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #B9E9FC, #B0DAFF, #FEFF86);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+.gradient-background-dark {
+    background: linear-gradient(300deg, #B0DAFF, #82AAE3, #8EA7E9);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+.download-icon {
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+.white {
+    fill: white;
+}
+
+.dark {
+    fill: #333333;
+}
+
+.icon-square {
+    margin-right: 20px;
+}
+
+.profile-img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.height-30 {
+    height: 30px;
+}
+
+.width-200 {
+    width: 200px;
+}
+
+.kill-padding {
+    padding-left: 5px;
+}
+
+.centralized {
+    justify-content: center;
+}
+
+#review-carousel {
+    height: 400px;
+}
+
+.height-280 {
+    height: 280px;
+}
+
+.navbar .nav-item.dropdown:click .dropdown-menu {
+    display: block;
+}
+
+.navbar .nav-item.dropdown:click .dropdown-menu .dropdown-item {
+    display: block;
+}
+
+.SkyFetchMainLogo {
+    margin: auto;
+}
+
+.flags {
+    min-width: 0 !important;
+    --mdb-dropdown-min-width: 0 !important;
+}
+
+.flag {
+    margin: 0 !important;
+}
+
+#carousel-reviews {
+    height: 410px !important; 
+}
+
+.downloadButton {
+    margin-left: 0px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

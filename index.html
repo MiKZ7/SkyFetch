@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyFetch</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#carouselExampleIndicators').carousel();
+    });
+  </script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h2 class="text-primary SkyFetchMainLogo">Sky</h2>
+        <h2 class="SkyFetchMainLogo">Fetch</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#title" id="Home1">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Service" id="Service1">Сервис</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Reviews" id="Reviews1">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact" id="Contact1">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false">
+              <i class="flag-russia flag" id="currentLang"></i>
+            </a>
+
+            <ul class="dropdown-menu flags" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item flags" onclick="changeLanguage('ru')" id="ru"><i
+                    class="flag-russia flag"></i></a>
+              </li>
+              <li>
+                <a class="dropdown-item flags" onclick="changeLanguage('en')" id="en"><i
+                    class="flag-united-kingdom flag"></i></a>
+              </li>
+              <li>
+                <a class="dropdown-item flags" onclick="changeLanguage('ko')"><i class="flag-south-korea flag"></i></a>
+              </li>
+              <!-- Add more language options here -->
+            </ul>
+          </li>
+          <!-- End of Language Dropdown -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BannerTop -->
+  <section class="gradient-background" id="title">
+    <div class="container col-xxl-8 px-4 py-5 align-items-center">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5 centralized">
+
+        <!-- Carousel -->
+        <div class="col-10 col-sm-8 col-lg-6 d-flex">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="3"
+                aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+
+                <div class="bg-image">
+                  <img src="./images/Photo0.png" class="d-block w-100" alt="SkyFetch screenshot" />
+                  <div class="mask carousel-caption d-none d-md-block" style="background-color: hsla(0, 0%, 0%, 0.5)">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 id="photo0Label">Удобно</h5>
+                      <p class="text-white mb-3" id="photo0Text">Используйте Телеграм Чатбот или приложение SkyFetch,
+                        чтобы находить или создавать посты</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <img src="./images/Photo0.png" class="d-block w-100" alt="SkyFetch screenshot">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="photo1Label">Ease of Use</h5>
+                  <p id="photo1Text">Connect with people who </p>
+                </div> -->
+
+              </div>
+              <div class="carousel-item">
+                <div class="bg-image">
+                  <img src="./images/Photo1.png" class="d-block w-100" alt="First photo" />
+                  <div class="mask carousel-caption d-none d-md-block" style="background-color: hsla(0, 0%, 0%, 0.3)">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 id="photo1Label">Быстро</h5>
+                      <p class="text-white mb-3" id="photo1Text">Связывайтесь с другими пользователями, которые могут доставить ваши посылки или документы</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="bg-image">
+                  <img src="./images/Photo2.png" class="d-block w-100" alt="Second photo" />
+                  <div class="mask carousel-caption d-none d-md-block" style="background-color: hsla(0, 0%, 0%, 0.3)">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 id="photo2Label">Независимо</h5>
+                      <p class="text-white mb-3" id="photo2Text">Доставляйте посылки как Курьер или отправляйте посылки
+                        в качестве Отправителя - на своих условиях</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="bg-image">
+                  <img src="./images/Photo3.png" class="d-block w-100" alt="Third photo" />
+                  <div class="mask carousel-caption d-none d-md-block" style="background-color: hsla(0, 0%, 0%, 0.3)">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 id="photo3Label">Надежно</h5>
+                      <p class="text-white mb-3" id="photo3Text">Отправляйте и получайте посылки, доставленные другими
+                        пользователями в целости и сохранности</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators"
+              data-mdb-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleIndicators"
+              data-mdb-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-6">
+
+          <!-- Text -->
+          <h1 class="text-primary display-5 fw-bold text-body-emphasis lh-1 mb-3" id="catchPhrase">Отправляйте что
+            угодно, куда угодно и когда угодно - SkyFetch</h1>
+          <p class="lead" id="intro">SkyFetch - Ваш надежный сервис доставки, соединяющий отправителей и курьеров для
+            обеспечения быстрой и эффективной доставки товаров по всему миру.</p>
+
+          <!-- Buttons -->
+          <div class="container d-grid gap-2 d-md-flex justify-content-md-start kill-padding">
+            <div class="row">
+
+              <button type="button" class="col-lg-5 col-sm-4 mb-2 btn btn-light btn-lg px-4" disabled>
+                <svg class="download-icon dark" xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                </svg> <span id="downloadAndroid"> Скачать</span></button>
+              <div style="width: 0px; padding-left: 10px !important; padding-right: 0px;"></div>
+              <button type="button" class="col-lg-5 col-sm-4 mb-2 btn btn-light btn-lg px-4" disabled>
+                <svg class="download-icon dark" xmlns="http://www.w3.org/2000/svg" height="1.5em"
+                  viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                </svg> <span id="downloadIos"> Скачать</span></button>
+              <button onclick="window.open('tg://resolve?domain=SkyFetchBot', '_blank')" type="button"
+                class="col-lg-5 col-sm-4 mb-2 btn btn-primary btn-lg px-4">
+                <svg class="download-icon white" xmlns="http://www.w3.org/2000/svg" height="1.3em"
+                  viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z" />
+                </svg><span id="chatbot"> Чатбот</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner 2 - Our Service -->
+
+  <section class="pt-5" id="Service">
+    <div class="container px-4 py-5">
+      <div class="row g-4 py-2 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="2.5rem"
+              viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <style>
+                svg {
+                  fill: #333333
+                }
+              </style>
+              <path
+                d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis" id="fast">Скорость</h3>
+            <p>
+              <li>
+                <strong id="connect">Связь</strong>
+                <br>
+                <span id="connectText">
+                  Найдите курьера за минуты, обеспечивая быструю и надежную доставку до пункта назначения.
+                </span>
+              </li>
+              <br>
+              <li>
+                <strong id="communicate">Общение</strong>
+                <br>
+                <span id="communicateText">
+                  Поддерживайте общение с курьером или отправителем на протяжении всей сделки для эффективной
+                  координации.
+                </span>
+              </li>
+              <br>
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="2.5rem"
+              viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <style>
+                svg {
+                  fill: #333333
+                }
+              </style>
+              <path
+                d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis" id="secure">Безопасность</h3>
+            <p>
+              <li>
+                <strong id="pay">Оплата</strong>
+                <br>
+                <span id="payText">
+                  Наслаждайтесь безопасными платежами с надежным шифрованием, обеспечивающим защиту ваших личных данных.
+                </span>
+              </li>
+              <br>
+              <li>
+                <strong id="verify">Проверка</strong>
+                <br>
+                <span id="verifyText">
+                  Все курьеры проходят тщательную проверку для обеспечения надежности и профессионализма в доставке.
+                </span>
+              </li>
+              <br>
+            </p>
+            <!-- <a href="#" class="btn btn-primary">
+              Primary button
+            </a> -->
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="2.5rem"
+              viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <style>
+                svg {
+                  fill: #333333
+                }
+              </style>
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis" id="transparent">Прозрачность</h3>
+            <p>
+              <li>
+                <strong id="track">Видимость</strong>
+                <br>
+                <span id="trackText">
+                  Отслеживайте вашу посылку в реальном времени, получая своевременные обновления для полного контроля.
+                </span>
+              </li>
+              <br>
+              <li>
+                <strong id="review">Отзывы</strong>
+                <br>
+                <span id="reviewText">Влияйте на сообщество SkyFetch своими отзывами. Стройте доверие и ответственность,
+                  участвуя в нашем будущем.
+                </span>
+              </li>
+              <br>
+            </p>
+            <!-- <a href="#" class="btn btn-primary">
+              Primary button
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Reviews MDB -->
+  <section class="gradient-background-dark pt-5" id="Reviews">
+    <!-- Carousel wrapper -->
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center py-5" data-mdb-ride="carousel">
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+        <button class="carousel-control-prev position-relative" type="button"
+          data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next position-relative" type="button"
+          data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Inner -->
+      <div class="carousel-inner py-4" id="carousel-reviews">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Dastan.jpg" alt="Review Dastan"
+                  style="width: 150px; height: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Dastan">Дастан</h5>
+                <p class="text-white fw-bold">Разработчик ИИ</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="DastanReview">
+                    Нечто действительно новое в сфере срочной доставки. SkyFetch - очень быстрое и надежное приложение,
+                    незаменимое для непредвиденных посылок или подарков. Мне нравится!
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Zheka.png" alt="Review Yevgeniy"
+                  style="width: 150px; height: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Yevgeniy">Евгений</h5>
+                <p class="text-white fw-bold">Back-End Разработчик</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="YevgeniyReview">
+                    Я использовал SkyFetch для отправки подарков домой. Приложение выделяется быстрым процессом
+                    соединения людей, делая доставку простой и эффективной.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li>
+                    <i class="fas fa-star-half-alt fa-sm text-primary"></i>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Madi.jpg" alt="Review Madi"
+                  style="width: 150px; height: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Madi">Мади</h5>
+                <p class="text-white fw-bold">Веб Дизайнер</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="MadiReview">
+                    Впечатляющий дизайн и интерфейс. Более того, приложение помогает мне в ведении моего бизнеса, когда
+                    мне нужно отправлять товары моим заграничным клиентам.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Damir.png" alt="Review Damir"
+                  style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Damir">Дамир</h5>
+                <p class="text-white fw-bold">Студент</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="DamirReview">
+                    SkyFetch помог моей сестре при поступлении в университет. Она опоздала с отправкой документов, и
+                    только это приложение спасло нас от провала по срокам.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Tore.png" alt="Review Tore"
+                  style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Toremurat">Торемурат</h5>
+                <p class="text-white fw-bold">Студент</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="ToremuratReview">
+                    Я скучал по домашней еде, но отправлять еду почтой из Казахстана слишком дорого и долго. Благодаря
+                    SkyFetch, я могу поесть свежего казы!
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li>
+                    <i class="fas fa-star fa-sm text-primary"></i>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Dima.jpg" alt="Review Dima"
+                  style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Dmitriy">Дмитрий</h5>
+                <p class="text-white fw-bold">Менеджер по Проектам</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="DmitriyReview">
+                    Я отправлял сувениры домой из Кореи только 2 раза, потому что слишком дорого. Но через SkyFetch я
+                    уже отправил несколько коробок с подарками моей семье!
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Alina.png" alt="Review Alina"
+                  style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Alina">Алина</h5>
+                <p class="text-white fw-bold">Менеджер Поставок</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="AlinaReview">
+                    Моя компания использует SkyFetch для быстрой отправки наших продуктов. Приложение прозрачное,
+                    недорогое, удобное и быстрое.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/Review Alish.jpg" alt="Review Alisher"
+                  style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Alisher">Алишер</h5>
+                <p class="text-white fw-bold">Исследователь</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="AlisherReview">
+                    Как путешественнику, мне нравится использовать SkyFetch, так как он позволяет мне легко находить
+                    отправителей и немного подзарабатывать каждую поездку.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li>
+                    <i class="fas fa-star-half-alt fa-sm text-primary"></i>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar" style="width: 150px;" />
+                <h5 class="text-primary fw-bold mb-1" id="Maria">Мария</h5>
+                <p class="text-white fw-bold">Фотограф</p>
+                <p class="text-white">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  <span id="MariaReview">
+                    Мои клиенты часто приезжают в Корею ненадолго, поэтому очень неудобно и дорого отправлять их
+                    фотографии по почте. Сейчас я использую SkyFetch.
+                  </span>
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star fa-sm text-primary"></i></li>
+                  <li><i class="fas fa-star-half-alt fa-sm text-primary"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+    </div>
+    <!-- Carousel wrapper -->
+  </section>
+
+  <!-- Contact us -->
+  <section class="mx-5 py-5" id="Contact">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4" id="contactUs">Свяжитесь с нами</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5" id="contactText">У вас есть вопросы? Пожалуйста, не стесняйтесь
+      напрямую связаться с нами. Наша команда ответит вам в течение нескольких часов, чтобы помочь вам.</p>
+
+    <div class="row">
+      <div class="col-md-9 mb-md-0 mb-5">
+
+      </div>
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <label for="name" class="" id="yourName">Ваше имя</label>
+                <input type="text" id="name" name="name" class="form-control">
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <label for="email" id="yourEmail">Ваш email</label>
+                <input type="text" id="email" name="email" class="form-control">
+              </div>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <label for="subject" class="" id="yourSubject">Запрос</label>
+                <input type="text" id="subject" name="subject" class="form-control">
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+
+              <div class="md-form mb-3">
+                <label for="message" id="yourMessage">Сообщение</label>
+                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+              </div>
+
+            </div>
+          </div>
+          <!--Grid row-->
+
+        </form>
+
+        <div class="text-center text-md-left">
+          <a class="btn btn-primary" onclick="validateForm();" id="yourSend">Отправить</a>
+        </div>
+        <div class="status" style="color: red;"></div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>Seoul, South Korea</p>
+          </li>
+
+          <li><i class="fas fa-phone mt-4 fa-2x"></i>
+            <p>+ 8210-9464-8780</p>
+          </li>
+
+          <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+            <p>support@skyfetchapp.com</p>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span id="connectSNS">Следите за нами в социальных сетях:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a> -->
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <!-- <a href="" class="me-4 link-secondary">
+          <i class="fab fa-github"></i>
+        </a> -->
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i>SkyFetch
+            </h6>
+            <p id="footerText">
+              SkyFetch объединяет отправителей и курьеров, создавая простой и эффективный способ отправки ваших вещей по всему миру.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" id="productsFooter">
+              Продукты
+            </h6>
+            <p>
+              <a href="tg://resolve?domain=SkyFetchBot!" class="text-reset" id="ChatbotFooter">Чатбот</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Android</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">iOS</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset"></a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" id="usefulLinks">
+              Useful links
+            </h6>
+            <p>
+              <a href="https://chat.openai.com/g/g-UEdfde8wT-skyfetch-assistant" target="blank"
+                class="text-reset">SkyFetch Assistant</a>
+            </p>
+            <!-- <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p> -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" id="contactFooter">Свяжитесь с нами</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> <span id="cityFooter">Сеул</span></p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              support@skyfetchapp.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 8210-9464-8780</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://SkyFetchApp.com/">SkyFetchApp.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script>
+    // function to switch language of web page
+    function changeLanguage(lang) {
+      let currentLang = document.getElementById("currentLang");
+      let element = document.getElementById("catchPhrase");
+      let home = document.getElementById("Home1");
+      let service = document.getElementById("Service1");
+      let reviews = document.getElementById("Reviews1");
+      let contact = document.getElementById("Contact1");
+      let intro = document.getElementById("intro");
+      let chatbot = document.getElementById("chatbot");
+      let android = document.getElementById("downloadAndroid");
+      let ios = document.getElementById("downloadIos");
+      let fast = document.getElementById("fast");
+      let connect = document.getElementById("connect");
+      let communicate = document.getElementById("communicate");
+      let secure = document.getElementById("secure");
+      let pay = document.getElementById("pay");
+      let verify = document.getElementById("verify");
+      let transparent = document.getElementById("transparent");
+      let track = document.getElementById("track");
+      let review = document.getElementById("review");
+      let connectText = document.getElementById("connectText");
+      let communicateText = document.getElementById("communicateText");
+      let payText = document.getElementById("payText");
+      let verifyText = document.getElementById("verifyText");
+      let trackText = document.getElementById("trackText");
+      let Dastan = document.getElementById("Dastan");
+      let Yevgeniy = document.getElementById("Yevgeniy");
+      let Madi = document.getElementById("Madi");
+      let Dmitriy = document.getElementById("Dmitriy");
+      let Alina = document.getElementById("Alina");
+      let Alisher = document.getElementById("Alisher");
+      let Damir = document.getElementById("Damir");
+      let Maria = document.getElementById("Maria");
+      let Toremurat = document.getElementById("Toremurat");
+      let DastanReview = document.getElementById("DastanReview");
+      let YevgeniyReview = document.getElementById("YevgeniyReview");
+      let MadiReview = document.getElementById("MadiReview");
+      let DmitriyReview = document.getElementById("DmitriyReview");
+      let AlinaReview = document.getElementById("AlinaReview");
+      let AlisherReview = document.getElementById("AlisherReview");
+      let DamirReview = document.getElementById("DamirReview");
+      let MariaReview = document.getElementById("MariaReview");
+      let ToremuratReview = document.getElementById("ToremuratReview");
+      let contactUs = document.getElementById("contactUs");
+      let contactText = document.getElementById("contactText");
+      let yourName = document.getElementById("yourName");
+      let yourEmail = document.getElementById("yourEmail");
+      let yourSubject = document.getElementById("yourSubject");
+      let yourMessage = document.getElementById("yourMessage");
+      let yourSend = document.getElementById("yourSend");
+      let connectSNS = document.getElementById("connectSNS");
+      let contactFooter = document.getElementById("contactFooter");
+      let cityFooter = document.getElementById("cityFooter");
+      let usefulLinks = document.getElementById("usefulLinks");
+      let productsFooter = document.getElementById("productsFooter");
+      let footerText = document.getElementById("footerText");
+      let ChatbotFooter = document.getElementById("chatbotFooter");
+      let photo0Label = document.getElementById("photo0Label");
+      let photo1Label = document.getElementById("photo1Label");
+      let photo2Label = document.getElementById("photo2Label");
+      let photo3Label = document.getElementById("photo3Label");
+      let photo0Text = document.getElementById("photo0Text");
+      let photo1Text = document.getElementById("photo1Text");
+      let photo2Text = document.getElementById("photo2Text");
+      let photo3Text = document.getElementById("photo3Text");
+      if (lang == "en") {
+        currentLang.classList = "flag-united-kingdom flag"
+        element.innerHTML = "Send Anything, Anywhere, Anytime with SkyFetch";
+        home.innerHTML = "Home";
+        service.innerHTML = "Service";
+        reviews.innerHTML = "Reviews";
+        contact.innerHTML = "Contact";
+        intro.innerHTML = "SkyFetch: Your global shipping solution - Connecting senders and couriers for fast, efficient worldwide delivery of your items."
+        android.innerHTML = " Download";
+        ios.innerHTML = " Download";
+        chatbot.innerHTML = " Chatbot"
+        fast.innerHTML = "Fast"
+        connect.innerHTML = "Connect"
+        communicate.innerHTML = "Communicate"
+        secure.innerHTML = "Secure"
+        pay.innerHTML = "Pay"
+        verify.innerHTML = "Verify"
+        transparent.innerHTML = "Transparent"
+        track.innerHTML = "Track"
+        review.innerHTML = "Review"
+        connectText.innerHTML = "Connect with couriers in mere minutes, ensuring swift delivery to your destination within a matter of days."
+        communicateText.innerHTML = "Stay connected and communicate with the courier or sender at every step of the transaction."
+        payText.innerHTML = "Enjoy secure payments with advanced encryption for your financial transactions, protecting your sensitive information."
+        verifyText.innerHTML = "Our couriers undergo strict verification, ensuring your deliveries are handled by trusted professionals."
+        trackText.innerHTML = "Track your delivery in real-time, from start to finish, with timely updates for total transparency and control."
+        reviewText.innerHTML = "Shape our SkyFetch community with your feedback. Build trust and accountability. Be a part of our future."
+        Dastan.innerHTML = "Dastan"
+        Yevgeniy.innerHTML = "Yevgeniy"
+        Madi.innerHTML = "Madi"
+        Dmitriy.innerHTML = "Dmitriy"
+        Damir.innerHTML = "Damir"
+        Alisher.innerHTML = "Alisher"
+        Toremurat.innerHTML = "Toremurat"
+        Maria.innerHTML = "Maria"
+        Alina.innerHTML = "Alina"
+        DastanReview.innerHTML = "Game-changer for urgent delivery services. SkyFetch is fast, reliable, and a true life-saver for last-minute gifts. I like it!"
+        YevgeniyReview.innerHTML = "I used SkyFetch to send some gifts back home. It excels in fast courier connections, making delivery effortless and efficient."
+        MadiReview.innerHTML = "Impressive user interface. Also, it helps me with my small business when I need to send the goods abroad to my clients."
+        DmitriyReview.innerHTML = "I sent souvenirs back home from Korea only 2 times because it's too expensive. Using SkyFetch, I already sent several boxes to my family!"
+        AlisherReview.innerHTML = "As a traveler, I like to use the SkyFetch chatbot, as it allows me to find senders easily and make some additional money each trip."
+        DamirReview.innerHTML = "SkyFetch helped my sister with her university application. She was late to send the documents, and only this app saved us from missing the deadline."
+        AlinaReview.innerHTML = "My company uses SkyFetch for urgent shipments of our products. It is transparent, affordable, convenient, and fast."
+        MariaReview.innerHTML = "My customers often visit Korea for a short period of time, so it was difficult and expensive to send their photos by post. Now I use SkyFetch all the time!"
+        ToremuratReview.innerHTML = "I missed my home food, but sending anything by post from Kazakhstan was too expensive and took too long. Thanks to SkyFetch, I can enjoy fresh qazy!"
+        contactUs.innerHTML = "Contact us"
+        contactText.innerHTML = "Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you."
+        yourName.innerHTML = "Your name"
+        yourEmail.innerHTML = "Your email"
+        yourSubject.innerHTML = "Subject"
+        yourMessage.innerHTML = "Your message"
+        yourSend.innerHTML = "Send"
+        connectSNS.innerHTML = "Get connected with us on social networks:"
+        usefulLinks.innerHTML = "Useful links"
+        contactFooter.innerHTML = "Contact"
+        cityFooter.innerHTML = "Seoul"
+        productsFooter.innerHTML = "Products"
+        footerText.innerHTML = "SkyFetch brings together senders and couriers, creating a simple and efficient way to ship your items around the world."
+        photo0Label.innerHTML = "Convenience"
+        photo1Label.innerHTML = "Connection"
+        photo2Label.innerHTML = "Delivery"
+        photo3Label.innerHTML = "Review"
+        photo0Text.innerHTML = "Use Telegram Chatbot or SkyFetch application to create or find posts"
+        photo1Text.innerHTML = "Connect with travelers who can deliver your parcels or documents"
+        photo2Text.innerHTML = "Deliver as a Courier or send packages as a Sender on your own terms"
+        photo3Text.innerHTML = "Receive your parcels safely delivered by fellow SkyFetch users"
+      } else if (lang == "ru") {
+        currentLang.classList = "flag-russia flag"
+        element.innerHTML = "Отправляйте что угодно, куда угодно и когда угодно - SkyFetch";
+        home.innerHTML = "Главная";
+        service.innerHTML = "Сервис";
+        reviews.innerHTML = "Отзывы";
+        contact.innerHTML = "Контакты";
+        intro.innerHTML = "SkyFetch - Ваш надежный сервис доставки, соединяющий отправителей и курьеров для обеспечения быстрой и эффективной доставки товаров по всему миру."
+        android.innerHTML = " Скачать";
+        ios.innerHTML = " Скачать";
+        chatbot.innerHTML = " Телеграм"
+        fast.innerHTML = "Скорость"
+        connect.innerHTML = "Связь"
+        communicate.innerHTML = "Общение"
+        secure.innerHTML = "Безопасность"
+        pay.innerHTML = "Оплата"
+        verify.innerHTML = "Проверка"
+        transparent.innerHTML = "Прозрачность"
+        track.innerHTML = "Видимость"
+        review.innerHTML = "Отзывы"
+        connectText.innerHTML = "Найдите курьера за минуты, обеспечивая быструю и надежную доставку до пункта назначения."
+        communicateText.innerHTML = "Поддерживайте общение с курьером или отправителем на протяжении всей сделки для эффективной координации."
+        payText.innerHTML = "Наслаждайтесь безопасными платежами с надежным шифрованием, обеспечивающим защиту ваших личных данных."
+        verifyText.innerHTML = "Все наши курьеры проходят тщательную проверку для обеспечения надежности и профессионализма в доставке."
+        trackText.innerHTML = "Отслеживайте вашу посылку в реальном времени, получая своевременные обновления для полного контроля."
+        reviewText.innerHTML = "Влияйте на сообщество SkyFetch своими отзывами. Стройте доверие и ответственность, участвуя в нашем будущем."
+        Dastan.innerHTML = "Дастан"
+        Yevgeniy.innerHTML = "Евгений"
+        Madi.innerHTML = "Мади"
+        Dmitriy.innerHTML = "Дмитрий"
+        Damir.innerHTML = "Дамир"
+        Alisher.innerHTML = "Алишер"
+        Toremurat.innerHTML = "Торемурат"
+        Maria.innerHTML = "Мария"
+        Alina.innerHTML = "Алина"
+        DastanReview.innerHTML = "Нечто действительно новое в сфере срочной доставки. SkyFetch - очень быстрое и надежное приложение, незаменимое для непредвиденных посылок или подарков. Мне нравится!"
+        YevgeniyReview.innerHTML = "Я использовал SkyFetch для отправки подарков домой. Приложение выделяется быстрым процессом соединения людей, делая доставку простой и эффективной."
+        MadiReview.innerHTML = "Впечатляющий дизайн и интерфейс. Более того, приложение помогает мне в ведении моего бизнеса, когда мне нужно отправлять товары моим заграничным клиентам."
+        DmitriyReview.innerHTML = "Я отправлял сувениры домой из Кореи только 2 раза, потому что слишком дорого. Но через SkyFetch я уже отправил несколько коробок с подарками моей семье!"
+        AlisherReview.innerHTML = "Как путешественнику, мне нравится использовать SkyFetch, так как он позволяет мне легко находить отправителей и немного подзарабатывать каждую поездку."
+        DamirReview.innerHTML = "SkyFetch помог моей сестре при поступлении в университет. Она опоздала с отправкой документов, и только это приложение спасло нас от провала по срокам."
+        AlinaReview.innerHTML = "Моя компания использует SkyFetch для быстрой отправки наших продуктов. Приложение прозрачное, недорогое, удобное и быстрое."
+        MariaReview.innerHTML = "Мои клиенты часто приезжают в Корею ненадолго, поэтому очень неудобно и дорого отправлять их фотографии по почте. Сейчас я использую SkyFetch."
+        ToremuratReview.innerHTML = "Я скучал по домашней еде, но отправлять еду почтой из Казахстана слишком дорого и долго. Благодаря SkyFetch, я могу поесть свежего казы!"
+        contactUs.innerHTML = "Свяжитесь с нами"
+        contactText.innerHTML = "У вас есть вопросы? Пожалуйста, не стесняйтесь напрямую связаться с нами. Наша команда ответит вам в течение нескольких часов, чтобы помочь вам."
+        yourName.innerHTML = "Ваше имя"
+        yourEmail.innerHTML = "Ваш email"
+        yourSubject.innerHTML = "Запрос"
+        yourMessage.innerHTML = "Сообщение"
+        yourSend.innerHTML = "Отправить"
+        connectSNS.innerHTML = "Следите за нами в социальных сетях:"
+        usefulLinks.innerHTML = "Полезные ссылки"
+        contactFooter.innerHTML = "Свяжитесь с нами"
+        cityFooter.innerHTML = "Сеул"
+        productsFooter.innerHTML = "Продукты"
+        footerText.innerHTML = "SkyFetch объединяет отправителей и курьеров, создавая простой и эффективный способ отправки ваших вещей по всему миру."
+        ChatbotFooter.innerHTML = "Чатбот"
+        photo0Label.innerHTML = "Удобно"
+        photo1Label.innerHTML = "Быстро"
+        photo2Label.innerHTML = "Независимо"
+        photo3Label.innerHTML = "Надежно"
+        photo0Text.innerHTML = "Используйте Телеграм Чатбот или приложение SkyFetch, чтобы находить или создавать посты"
+        photo1Text.innerHTML = "Связывайтесь с другими пользователями, которые могут доставить ваши посылки или документы"
+        photo2Text.innerHTML = "Доставляйте посылки как Курьер или отправляйте посылки в качестве Отправителя - на своих условиях"
+        photo3Text.innerHTML = "Отправляйте и получайте посылки, доставленные другими пользователями в целости и сохранности"
+      } else if (lang == "ko") {
+        currentLang.classList = "flag-south-korea flag"
+        element.innerHTML = "SkyFetch와 함께 언제 어디서나 무엇이든 보내세요";
+        home.innerHTML = "홈";
+        service.innerHTML = "서비스";
+        reviews.innerHTML = "리뷰";
+        contact.innerHTML = "콘택트";
+        intro.innerHTML = "SkyFetch - 전세계 어디든 빠르고 쉽게 물품을 배송하는 발송자와 운반원을 연결해주는 서비스입니다."
+        android.innerHTML = " 다운로드";
+        ios.innerHTML = " 다운로드";
+        chatbot.innerHTML = " 챗봇"
+        fast.innerHTML = "빠른"
+        connect.innerHTML = "연결"
+        communicate.innerHTML = "소통"
+        secure.innerHTML = "안전한"
+        pay.innerHTML = "지불"
+        verify.innerHTML = "검증"
+        transparent.innerHTML = "투명한"
+        track.innerHTML = "추적"
+        review.innerHTML = "리뷰"
+        connectText.innerHTML = "빠른 연결로 택배를 쉽게 찾아 여러분의 목적지까지 신속하게 배달합니다."
+        communicateText.innerHTML = "거래의 모든 단계에서 택배 또는 발송자와 지속적으로 소통하며 정보를 교환하세요."
+        payText.innerHTML = "첨단 암호화 기술로 보호되는 안전한 결제 시스템을 통해 금융 거래를 안심하고 이용하세요."
+        verifyText.innerHTML = "저희 택배는 엄격한 검증을 거쳐, 신뢰할 수 있는 전문가가 여러분의 배송을 담당합니다."
+        trackText.innerHTML = "실시간으로 배송을 추적하고, 시시각각 업데이트를 받아 전체 과정을 완벽하게 통제하세요."
+        reviewText.innerHTML = "여러분의 피드백으로 SkyFetch 커뮤니티를 형성하고, 신뢰와 책임을 구축하세요. 우리의 미래에 참여하세요."
+        Dastan.innerHTML = "Dastan"
+        Yevgeniy.innerHTML = "Yevgeniy"
+        Madi.innerHTML = "Madi"
+        Dmitriy.innerHTML = "Dmitriy"
+        Damir.innerHTML = "Damir"
+        Alisher.innerHTML = "Alisher"
+        Toremurat.innerHTML = "Toremurat"
+        Maria.innerHTML = "Maria"
+        Alina.innerHTML = "Alina"
+        DastanReview.innerHTML = "긴급 배송 분야에서 진정으로 새로운 것. SkyFetch는 매우 빠르고 신뢰할 수 있는 앱으로, 예상치 못한 소포나 선물에 필수적입니다. 저는 좋아합니다!"
+        YevgeniyReview.innerHTML = "저는 집으로 선물을 보내기 위해 SkyFetch를 사용했습니다. 이 앱은 사람들을 빠르게 연결하는 과정에서 두각을 나타내며, 배송을 간단하고 효율적으로 만듭니다."
+        MadiReview.innerHTML = "인상적인 디자인과 인터페이스입니다. 또한, 이 앱은 해외 고객에게 제품을 보낼 때 제 비즈니스를 운영하는 데 도움이 됩니다."
+        DmitriyReview.innerHTML = "저는 한국에서 고향으로 기념품을 단 두 번만 보냈는데, 너무 비쌌기 때문입니다. 하지만 SkyFetch를 통해 이미 여러 상자의 선물을 가족에게 보냈습니다!"
+        AlisherReview.innerHTML = "여행자로서 저는 SkyFetch 챗봇을 사용하는 것이 좋습니다. 이를 통해 쉽게 발송인을 찾고 여행마다 조금씩 추가 수익을 올릴 수 있습니다."
+        DamirReview.innerHTML = "SkyFetch는 제 동생이 대학에 지원할 때 도움이 되었습니다. 그녀는 서류를 보내는 데 늦었고, 이 앱만이 마감 시간을 놓치지 않게 해주었습니다."
+        AlinaReview.innerHTML = "저희 회사는 제품을 신속하게 발송하기 위해 SkyFetch를 사용합니다. 이 앱은 투명하고, 비용이 적게 들며, 편리하고 빠릅니다."
+        MariaReview.innerHTML = "저의 고객들은 종종 짧은 기간 동안 한국을 방문하기 때문에, 우편으로 그들의 사진을 보내는 것은 매우 불편하고 비쌌습니다. 이제 저는 항상 SkyFetch를 사용합니다."
+        ToremuratReview.innerHTML = "저는 고향의 음식이 그리웠지만, 카자흐스탄에서 우편으로 음식을 보내는 것은 너무 비싸고 오래 걸렸습니다. SkyFetch 덕분에, 저는 신선한 카지를 즐길 수 있습니다!"
+        contactUs.innerHTML = "문의하기"
+        contactText.innerHTML = "질문이 있으신가요? 주저하지 마시고 직접 저희에게 연락해 주세요. 저희 팀이 몇 시간 내에 도와드리기 위해 연락드릴 것입니다."
+        yourName.innerHTML = "이름"
+        yourEmail.innerHTML = "이메일"
+        yourSubject.innerHTML = "제목"
+        yourMessage.innerHTML = "메시지"
+        yourSend.innerHTML = "보내기"
+        connectSNS.innerHTML = "소셜 네트워크에서 저희와 연결하세요:"
+        usefulLinks.innerHTML = "링크"
+        contactFooter.innerHTML = "연락 정보"
+        cityFooter.innerHTML = "서울"
+        productsFooter.innerHTML = "소프트"
+        footerText.innerHTML = "SkyFetch는 발송인과 택배 기사를 연결하여, 전 세계적으로 물품을 배송하는 간단하고 효율적인 방법을 제공합니다."
+        photo0Label.innerHTML = "시작"
+        photo1Label.innerHTML = "연결"
+        photo2Label.innerHTML = "배송"
+        photo3Label.innerHTML = "끝"
+        photo0Text.innerHTML = "ㄱㅁㄱㄴㅁ"
+        photo1Text.innerHTML = "ㄴㄹㄴㅇㄹㄴㅇㄹ"
+        photo2Text.innerHTML = "ㄴㅇㄹㅇㄴㄹㄴ"
+        photo3Text.innerHTML = "ㅇㅀㅇㅎㅇㄹ"
+      }
+    }
+  </script>
+
+</body>
